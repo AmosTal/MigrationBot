@@ -65,7 +65,7 @@ app.post('/slack/events', async (req, res) => {
           // Send an email
           const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'recipient@example.com', // The recipient's email address
+            to: process.env.SEND_TO_EMAIL, // The recipient's email address
             subject: `App name mentioned: ${appName}`,
             text: `${appName} which you blocked is being migrated to TJ!`
           };
